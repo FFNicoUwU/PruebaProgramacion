@@ -14,8 +14,8 @@ public class Bebestible extends Producto{
     
     
     //Contructores
-    public Bebestible(String nombre, String color, int precio, String tipoBebestibles) {
-        super(nombre, color, precio);
+    public Bebestible(String marca, String TipoDeRefresco, int precio, String tipoBebestibles) {
+        super(marca,TipoDeRefresco, precio);
         this.tipoBebestibles=tipoBebestibles;
     }
     

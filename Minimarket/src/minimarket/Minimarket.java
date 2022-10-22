@@ -30,7 +30,7 @@ public class Minimarket {
             opcion = input.nextInt();
         switch(opcion){    
             case 1 -> {
-                System.out.println("1.- Carnes 2.- Verduras 3.- Bebestibles");
+                System.out.println("1.- Carnes 2.- Bebestibles 3.- Verduras");
                 
                 int opcion1;
                 opcion1 = input.nextInt();
@@ -51,15 +51,31 @@ public class Minimarket {
                     input.next();  
                     break;
                     
-                }
+                
+                 
+                    case 2: 
+                    //Creacion de objetos Bebestible
+                    Bebestible Refresco = new Bebestible("CocaCola","Zero",1500,"vidrio");
+                    Bebestible agua = new Bebestible("Cachantun","Con gas",1500,"Plastico");
+                    Bebestible jujo = new Bebestible("Andina","normal",2300,"Carton");
+                    List<Bebestible> listaBebestible = new ArrayList<>();
+                    listaBebestible.add(Refresco);
+                    listaBebestible.add(agua );
+                    listaBebestible.add(jujo);
+                    for (Bebestible b : listaBebestible){
+                        System.out.println("Marca: "+b.nombre+"// Precios:"+b.precio+"$// Color:"+b.color+"// Tipoanimal: "+b.getTipoBebestibles() );}
+                    System.out.println("Presione una tecla para volver al menú");
+                         
+                    input.next();  
+                    break;
+            
+            
+            
+                 }
+            }
         }
-        }
-        }while(opcion!=3);
         
-     
+        
+                }while(opcion!=3);
     }
-
-
-
 }
-
