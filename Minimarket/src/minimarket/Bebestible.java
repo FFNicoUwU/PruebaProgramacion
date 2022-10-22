@@ -11,14 +11,15 @@ package minimarket;
 public class Bebestible extends Producto{
     //Atributos
     private String tipoBebestibles;
+    
+    
     //Contructores
     public Bebestible(String nombre, String color, int precio, String tipoBebestibles) {
         super(nombre, color, precio);
         this.tipoBebestibles=tipoBebestibles;
-        //Getter And Setter
-        
     }
-
+    
+     //Getter And Setter
     public String getTipoBebestibles() {
         return tipoBebestibles;
     }
