@@ -8,6 +8,40 @@ package minimarket;
  *
  * @author duran_xa
  */
-public class Producto {
+public abstract class Producto {
+    //Atributos
+    private String nombre,color;
+    private int precio;
+    //Constructores
+    public Producto(String nombre, String color, int precio) {
+        this.nombre = nombre;
+        this.color = color;
+        this.precio = precio;
+    }
+    //Getter Y Setter
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+    
     
 }
