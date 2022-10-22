@@ -27,6 +27,8 @@ public class Carne extends Producto {
     public void setTipoAnimal(String tipoAnimal) {
         this.tipoAnimal = tipoAnimal;
     }
-        
-
+@Override        
+public String Descripcion(){
+return "Nombre: "+this.nombre+"// Color: "+this.color+"// Precio: $"+this.precio+"// TipoAnimal: "+this.tipoAnimal;
+}
 }

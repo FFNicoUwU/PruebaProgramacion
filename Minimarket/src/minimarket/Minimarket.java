@@ -19,6 +19,8 @@ public class Minimarket {
      */
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
+        Inventario a = new Inventario();
+        a.a();
         Scanner input = new Scanner(System.in);
         int opcion = 0;
         do{
@@ -36,42 +38,27 @@ public class Minimarket {
                 opcion1 = input.nextInt();
                  switch(opcion1){ 
                      case 1: 
-                    //Creacion de objetos carnes
-                    Carne vaca = new Carne("Vacuno","Roja",4000,"Mamifero");
-                    Carne cerdo = new Carne("Cerdo","Blanco",3000,"Mamifero");
-                    Carne pollo = new Carne("Pollo","Blanco",2000,"Ave");
-                    List<Carne> listaCarnes = new ArrayList<>();
-                    listaCarnes.add(cerdo);
-                    listaCarnes.add(vaca );
-                    listaCarnes.add(pollo);
-                    for (Carne a : listaCarnes){
-                        System.out.println("Nombres: "+a.nombre+"// Precios:"+a.precio+"$// Color:"+a.color+"// Tipoanimal: "+a.getTipoAnimal());}
-                    System.out.println("Presione una tecla para volver al menú");
-                         
-                    input.next();  
-                    break;
-                    
-                
-                 
-                    case 2: 
-                    //Creacion de objetos Bebestible
-                    Bebestible Refresco = new Bebestible("CocaCola","Zero",1500,"vidrio");
-                    Bebestible agua = new Bebestible("Cachantun","Con gas",1500,"Plastico");
-                    Bebestible jujo = new Bebestible("Andina","normal",2300,"Carton");
-                    List<Bebestible> listaBebestible = new ArrayList<>();
-                    listaBebestible.add(Refresco);
-                    listaBebestible.add(agua );
-                    listaBebestible.add(jujo);
-                    for (Bebestible b : listaBebestible){
-                        System.out.println("Marca: "+b.nombre+"// Precios:"+b.precio+"$// Color:"+b.color+"// Tipoanimal: "+b.getTipoBebestibles() );}
-                    System.out.println("Presione una tecla para volver al menú");
-                         
-                    input.next();  
-                    break;
+                        a.listCarne();
+                        System.out.println("Presione una tecla para volver al menú");
+                        input.next();  
+                        break;
+
+                         case 2: 
+                        a.listarBebestible();
+                        System.out.println("Presione una tecla para volver al menú");
+                        input.next();  
+                        break;
             
             
             
                  }
+            }
+            case 2 ->{
+            
+            
+            
+            
+            
             }
         }
         

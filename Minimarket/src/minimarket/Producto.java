@@ -45,7 +45,11 @@ public abstract class Producto {
         this.precio = precio;
     }
    
+public String Descripcion(){
+return "Nombre: "+this.nombre+"// Color: "+this.color+"// Precio: $"+this.precio;
 
+
+}
     
     
 }
