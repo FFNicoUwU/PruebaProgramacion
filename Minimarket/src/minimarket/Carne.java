@@ -4,6 +4,9 @@
  */
 package minimarket;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author duran_xa
@@ -16,6 +19,7 @@ public class Carne extends Producto {
         super(nombre, color, precio);
         this.tipoAnimal=tipoAnimal;
     }
+    
     //Getter Y Setter 
     public String getTipoAnimal() {
         return tipoAnimal;
@@ -23,8 +27,6 @@ public class Carne extends Producto {
     public void setTipoAnimal(String tipoAnimal) {
         this.tipoAnimal = tipoAnimal;
     }
-    
+        
 
-    
-    
 }

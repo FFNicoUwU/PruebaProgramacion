@@ -27,4 +27,5 @@ public class Bebestible extends Producto{
     public void setTipoBebestibles(String tipoBebestibles) {
         this.tipoBebestibles = tipoBebestibles;
     }
+    
 }

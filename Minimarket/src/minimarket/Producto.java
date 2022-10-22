@@ -4,14 +4,16 @@
  */
 package minimarket;
 
+
 /**
  *
  * @author duran_xa
  */
 public abstract class Producto {
     //Atributos
-    private String nombre,color;
-    private int precio;
+    protected String nombre,color;
+    protected int precio;
+    
     //Constructores
     public Producto(String nombre, String color, int precio) {
         this.nombre = nombre;
@@ -42,6 +44,8 @@ public abstract class Producto {
     public void setPrecio(int precio) {
         this.precio = precio;
     }
+   
+
     
     
 }
