@@ -14,7 +14,7 @@ public class Vegetales extends Producto{
     
     //Constructor
 
-    public Vegetales(String tipoVegetales, String nombre, String color, int precio) {
+    public Vegetales(String nombre, String color, int precio,String tipoVegetales) {
         super(nombre, color, precio);
         this.tipoVegetales = tipoVegetales;
     }
@@ -29,5 +29,10 @@ public class Vegetales extends Producto{
         this.tipoVegetales = tipoVegetales;
     }
     
+    //override
+    @Override
+    public String Descripcion(){
+    return "Nombre: "+this.nombre+"// Color: "+this.color+"// Precio: $"+this.precio+"// Tipo Vegetales: "+this.tipoVegetales;
+    }
     
 }

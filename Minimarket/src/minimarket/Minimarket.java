@@ -37,18 +37,23 @@ public class Minimarket {
                 int opcion1;
                 opcion1 = input.nextInt();
                  switch(opcion1){ 
-                     case 1: 
-                        a.listCarne();
-                        System.out.println("Presione una tecla para volver al menú");
-                        input.next();  
-                        break;
+                    case 1: 
+                    a.listCarne();
+                    System.out.println("Presione una tecla para volver al menú");
+                    input.next();  
+                    break;
 
-                         case 2: 
-                        a.listarBebestible();
-                        System.out.println("Presione una tecla para volver al menú");
-                        input.next();  
-                        break;
-            
+                    case 2: 
+                    a.listarBebestible();
+                    System.out.println("Presione una tecla para volver al menú");
+                    input.next();  
+                    break;
+                        
+                    case 3:
+                    a.listVegetales();
+                    System.out.println("Presione para volver al menú");   
+                    input.next();
+                    break;
             
             
                  }
