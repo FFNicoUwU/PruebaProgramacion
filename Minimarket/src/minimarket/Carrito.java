@@ -40,11 +40,4 @@ public class Carrito implements calculo{
     float totalcarne= netocarnes-netocarnes*dsctocar;
     return totalcarne;
     }
-    public void listar(float totalcarne){
-
-        System.out.println(totalcarne); 
-    
-    
-    
-    }
 }
