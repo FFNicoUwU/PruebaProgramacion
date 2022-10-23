@@ -12,28 +12,39 @@ import java.util.List;
  * @author duran_xa
  */
 public class Carrito implements calculo{
+    
     Inventario a = new Inventario();
+
     List<Producto> listaProductos = new ArrayList<>();
-    
-    @Override
-    public int calculardsctocer() {
-        int preciocerdo = (int) (a.cerdo.precio-a.cerdo.precio*iva);
-        return preciocerdo;  
-    }
-    @Override
-    public int calculardsctovac() {
-        int preciovac = (int) (a.vaca.precio-a.vaca.precio*iva);
-        return preciovac;
-    }
-    @Override
-    public int calculardsctopol() {
-        int preciopol = (int) (a.pollo.precio-a.pollo.precio*iva);
-        return preciopol;
-      }
-    @Override
-    public int totalproductoscar() {
+    public int cantidadvac = 0;
+    public int cantidadpol = 0;
+    public int cantiadadcer = 0;
+ 
         
-        return 0;
-    }
     
+    @Override
+    public int calcularnetocar(){
+    int preciocerdo = a.cerdo.precio*cantiadadcer; 
+    int preciovac= a.vaca.precio*cantidadvac;
+    int preciopo= a.pollo.precio*cantidadpol;
+    int netocarnes= preciocerdo+preciovac+preciopo;
+        return netocarnes;
+}
+
+    @Override
+    public float calculardscotcar() {
+    int preciocerdo = a.cerdo.precio*cantiadadcer; 
+    int preciovac= a.vaca.precio*cantidadvac;
+    int preciopo= a.pollo.precio*cantidadpol;
+    int netocarnes= preciocerdo+preciovac+preciopo;
+    float totalcarne= netocarnes-netocarnes*dsctocar;
+    return totalcarne;
+    }
+    public void listar(float totalcarne){
+
+        System.out.println(totalcarne); 
+    
+    
+    
+    }
 }

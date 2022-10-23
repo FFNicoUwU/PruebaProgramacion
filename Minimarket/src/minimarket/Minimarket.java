@@ -61,17 +61,26 @@ public class Minimarket {
                 System.out.println("Elija una opcion: ");
                 int opcion1;
                 opcion1 = input.nextInt();
+                int cantidad=0;
                 switch(opcion1){ 
                     case 1  :{
                         a.listCarne();
-                        System.out.println("Ingrese el nombre: ");
+                        System.out.println("Ingrese el nombre");
                         String producto=input.next();
                         if (producto.equals(a.cerdo.nombre)){
-                            c.listaProductos.add(a.cerdo);}
+                            c.listaProductos.add(a.cerdo);
+                            cantidad = input.nextInt();
+                            c.cantiadadcer=cantidad;
+                            }
                             else if (producto.equals(a.vaca.nombre)){
-                                    c.listaProductos.add(a.vaca);}
+                                    c.listaProductos.add(a.vaca);
+                                    cantidad = input.nextInt();
+                                    c.cantidadvac=cantidad;}
+                                    
                                     else if (producto.equals(a.pollo.nombre)){
-                                            c.listaProductos.add(a.pollo);}
+                                            c.listaProductos.add(a.pollo);
+                                            cantidad = input.nextInt();
+                                            c.cantidadpol=cantidad;}
                         else
                             System.out.println("No existe...");
                             break;}

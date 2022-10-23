@@ -12,10 +12,8 @@ public interface calculo {
     float iva=(float) 0.19;
     float dsctocar=(float) 0.20;
     float dsctobeb=(float) 0.12;
-    public int calculardsctocer();
-    public int calculardsctovac();
-    public int calculardsctopol();
-    public int totalproductoscar();
+    public int calcularnetocar();
+    public float calculardscotcar();
     
     
     
