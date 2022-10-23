@@ -14,14 +14,13 @@ public interface calculo {
     float dsctobeb=(float) 0.12;
     public int calcularnetocar();
     public float calculardscotcar();
-    
-    
-    
-    
-    
-    
-    
-    
+
+    int calcularnetobeb();
+
+    float calculardscotbeb();
+
+    //Total Verduras
+    int calcularnetover();
 }
 
 
