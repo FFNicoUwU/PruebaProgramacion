@@ -69,6 +69,8 @@ public void listCarne(){
 public void listVegetales(){
        for (var i = 0; i < listaVegetales.size(); i++){
            System.out.println("Producto " + (i+1) + ": " + listaVegetales.get(i).Descripcion());
-       }       
+       } 
+
+       
     }
         }

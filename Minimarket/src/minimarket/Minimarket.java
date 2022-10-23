@@ -20,6 +20,7 @@ public class Minimarket {
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) {
         Inventario a = new Inventario();
+        Carrito c = new Carrito();
         a.a();
         Scanner input = new Scanner(System.in);
         int opcion = 0;
@@ -59,7 +60,42 @@ public class Minimarket {
                  }
             }
             case 2 ->{
+                System.out.println("1.- Carnes 2.- Bebestibles 3.- Verduras");
+                int opcion1;
+                opcion1 = input.nextInt();
+                switch(opcion1){ 
+                    case 1  :{
+                        a.listCarne();
+                        System.out.println("Ingrese el nombre");
+                        String producto=input.next();
+                        if (producto.equals(a.cerdo.nombre)){
+                            c.listaProductos.add(a.cerdo);}
+                            else if (producto.equals(a.vaca.nombre)){
+                                    c.listaProductos.add(a.vaca);}
+                                    else if (producto.equals(a.pollo.nombre)){
+                                            c.listaProductos.add(a.pollo);}
+                        else
+                            System.out.println("No existe...");
+                            break;}
+                    
+
+                    case 2  :{
+                        a.listarBebestible();
+                        System.out.println("Presione una tecla para volver al menú");
+                        input.next();
+                    }
+                        
+                    case 3 : {
+                        a.listVegetales();
+                        System.out.println("Presione para volver al menú");
+                        input.next();
+                    }
             
+            
+                 }
+                    for (var i = 0; i < c.listaProductos.size(); i++){
+                    System.out.println("Producto " + (i+1) + ": " + c.listaProductos.get(i).Descripcion());}
+                    String opcio = input.next();
             
             
             
