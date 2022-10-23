@@ -7,10 +7,7 @@ package minimarket;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author duran_xa
- */
+
 public class Inventario {
 
     public Inventario() {

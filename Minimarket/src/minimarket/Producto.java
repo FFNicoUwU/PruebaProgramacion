@@ -7,7 +7,7 @@ package minimarket;
 
 /**
  *
- * @author duran_xa
+ * @author nicop
  */
 public abstract class Producto {
     //Atributos

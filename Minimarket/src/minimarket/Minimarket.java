@@ -7,11 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- *
- * @author duran_xa1
- * 
- */
+
 public class Minimarket {
 
     /**
@@ -26,9 +22,9 @@ public class Minimarket {
         int opcion = 0;
         do{
             System.out.println("Bienvenido al minimarket La Completa Feria");
-            System.out.println("1.- Ver productos productos");
+            System.out.println("1.- Ver productos ");
             System.out.println("2.- Agregar producto al carrito");
-            System.out.println("3.- Eliminar producto"); /*Puede un comprador eliminar productos fuera de su carrito?, ni que fuera admin*/
+            System.out.println("3.- Eliminar producto");
             System.out.println("Escoja una opción: ");
             opcion = input.nextInt();
         switch(opcion){    
@@ -60,13 +56,15 @@ public class Minimarket {
                  }
             }
             case 2 ->{
+                System.out.println("======= Agregar Productos =======");
                 System.out.println("1.- Carnes 2.- Bebestibles 3.- Verduras");
+                System.out.println("Elija una opcion: ");
                 int opcion1;
                 opcion1 = input.nextInt();
                 switch(opcion1){ 
                     case 1  :{
                         a.listCarne();
-                        System.out.println("Ingrese el nombre");
+                        System.out.println("Ingrese el nombre: ");
                         String producto=input.next();
                         if (producto.equals(a.cerdo.nombre)){
                             c.listaProductos.add(a.cerdo);}
@@ -80,7 +78,7 @@ public class Minimarket {
                     
                     case 2 :{
                         a.listBebestible();
-                        System.out.println("Ingrese el nombre");
+                        System.out.println("Ingrese el nombre: ");
                         String producto=input.next();
                         if (producto.equals(a.Refresco.nombre)){
                             c.listaProductos.add(a.Refresco);}
@@ -106,18 +104,17 @@ public class Minimarket {
                             System.out.println("No existe...");
                             break;
                     }
+                    
+            
                  }
                     for (var i = 0; i < c.listaProductos.size(); i++){
                     System.out.println("Producto " + (i+1) + ": " + c.listaProductos.get(i).Descripcion());}
                     String opcio = input.next();
-            
-            
-            
-            
             }
+            
         }
-        
+            
         
                 }while(opcion!=3);
-    }
+    }       
 }
