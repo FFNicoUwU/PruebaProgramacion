@@ -94,8 +94,17 @@ public class Minimarket {
                         
                     case 3 : {
                         a.listVegetales();
-                        System.out.println("Presione para volver al menú");
-                        input.next();
+                        System.out.println("Ingrese el nombre: ");
+                        String producto=input.next();
+                        if (producto.equals(a.brocoli.nombre)){
+                            c.listaProductos.add(a.brocoli);}
+                            else if (producto.equals(a.Lechuga.nombre)){
+                                c.listaProductos.add(a.Lechuga);}
+                                else if (producto.equals(a.Papa.nombre)){
+                                    c.listaProductos.add(a.Papa);}
+                        else
+                            System.out.println("No existe...");
+                            break;
                     }
                  }
                     for (var i = 0; i < c.listaProductos.size(); i++){
