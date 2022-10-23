@@ -16,9 +16,9 @@ public class Inventario {
     public Inventario() {
     }
 //Creacion de objetos Bebestible
-Bebestible Refresco = new Bebestible("CocaCola","Negra",1500,"vidrio");
+Bebestible Refresco = new Bebestible("Cocacola","Negra",1500,"vidrio");
 Bebestible agua = new Bebestible("Cachantun","Transparente",1500,"Plastico");
-Bebestible jujo = new Bebestible("Fanta","Naranja",1300,"Plastico");
+Bebestible jugo = new Bebestible("Fanta","Naranja",1300,"Plastico");
                     
 //Creacion de objetos carnes
 Carne vaca = new Carne("Vacuno","Roja",4000,"Mamifero");
@@ -42,7 +42,7 @@ List<Vegetales> listaVegetales = new ArrayList<>();
 public void a(){
 listaBebestible.add(Refresco);
 listaBebestible.add(agua );
-listaBebestible.add(jujo);
+listaBebestible.add(jugo);
 
 listaCarnes.add(cerdo);
 listaCarnes.add(vaca );
@@ -55,10 +55,10 @@ listaVegetales.add(Papa);
             }
 
 //Metodo para listar
-public void listarBebestible(){
-for (Bebestible b : listaBebestible){
-System.out.println("Marca: "+b.nombre+"// Precios:"+b.precio+"$// Color:"+b.color+"// Envase: "+b.getTipoBebestibles() );}
-
+public void listBebestible(){
+       for (var i = 0; i < listaBebestible.size(); i++){
+        System.out.println("Producto " + (i+1) + ": " + listaBebestible.get(i).Descripcion());
+          }
 }
 public void listCarne(){
        for (var i = 0; i < listaCarnes.size(); i++){

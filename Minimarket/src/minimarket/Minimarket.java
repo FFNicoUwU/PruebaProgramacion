@@ -45,7 +45,7 @@ public class Minimarket {
                     break;
 
                     case 2: 
-                    a.listarBebestible();
+                    a.listBebestible();
                     System.out.println("Presione una tecla para volver al menú");
                     input.next();  
                     break;
@@ -78,20 +78,25 @@ public class Minimarket {
                             System.out.println("No existe...");
                             break;}
                     
-
-                    case 2  :{
-                        a.listarBebestible();
-                        System.out.println("Presione una tecla para volver al menú");
-                        input.next();
-                    }
+                    case 2 :{
+                        a.listBebestible();
+                        System.out.println("Ingrese el nombre");
+                        String producto=input.next();
+                        if (producto.equals(a.Refresco.nombre)){
+                            c.listaProductos.add(a.Refresco);}
+                            else if (producto.equals(a.agua.nombre)){
+                                    c.listaProductos.add(a.agua);}
+                                    else if (producto.equals(a.jugo.nombre)){
+                                            c.listaProductos.add(a.jugo);}
+                        else
+                            System.out.println("No existe...");
+                            break;}
                         
                     case 3 : {
                         a.listVegetales();
                         System.out.println("Presione para volver al menú");
                         input.next();
                     }
-            
-            
                  }
                     for (var i = 0; i < c.listaProductos.size(); i++){
                     System.out.println("Producto " + (i+1) + ": " + c.listaProductos.get(i).Descripcion());}

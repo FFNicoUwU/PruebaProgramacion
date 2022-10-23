@@ -14,8 +14,8 @@ public class Bebestible extends Producto{
     
     
     //Contructores
-    public Bebestible(String marca, String TipoDeRefresco, int precio, String tipoBebestibles) {
-        super(marca,TipoDeRefresco, precio);
+    public Bebestible(String nombre, String TipoDeRefresco, int precio, String tipoBebestibles) {
+        super(nombre,TipoDeRefresco, precio);
         this.tipoBebestibles=tipoBebestibles;
     }
     
@@ -27,5 +27,8 @@ public class Bebestible extends Producto{
     public void setTipoBebestibles(String tipoBebestibles) {
         this.tipoBebestibles = tipoBebestibles;
     }
-    
+@Override        
+public String Descripcion(){
+return "Nombre: "+this.nombre+"// Color: "+this.color+"// Precio: $"+this.precio+"// TipoBebestible: "+this.tipoBebestibles;
+}
 }
