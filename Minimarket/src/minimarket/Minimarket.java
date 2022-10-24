@@ -23,10 +23,10 @@ public class Minimarket {
         int opcion = 0;
         do {
             System.out.println("Bienvenido al minimarket La Completa Feria");
-            System.out.println("1.- Productos Disponibles ");
+            System.out.println("1.- Productos Disponibles de la tienda");
             System.out.println("2.- Agregar Productos al Carrito");
-            System.out.println("3.- Eliminar Productos");
-            System.out.println("4.- Boleta");
+            System.out.println("3.- Modificar Carrito");
+            System.out.println("4.- Imprimir Boleta");
             System.out.println("5.- Salir");
             System.out.println("Escoja una opción: ");
             opcion = input.nextInt();
@@ -157,13 +157,100 @@ public class Minimarket {
                     }
                     String opcio = input.next();
                 }
-
+                
+                
+                //Opcion de Modificar Carrito
                 case 3 -> {
+                    int cantidad = 0;
+                    System.out.println("======= Modificar Carrito ======");
+                    System.out.println("Elija el Producto que desea Modificar :3");
+                    System.out.println("1.- Carnes 2.- Bebestibles 3.- Verduras");
+                    System.out.println("Elija una opcion: ");
+                    int opcion1;
+                    opcion1 = input.nextInt();
+                    switch (opcion1) {
+                        //Modificacion Carnes
+                        case 1  :{
+                            a.listCarne();
+                            System.out.println("Ingrese el nombre");
+                            String producto=input.next();
+                            if (producto.equals(a.cerdo.nombre)){
+                                c.listaProductos.add(a.cerdo);
+                                System.out.println("Ingrese la cantidad que desea: ");
+                                cantidad = input.nextInt();
+                                c.cantiadadcer=cantidad;
+                            }
+                            else if (producto.equals(a.vaca.nombre)){
+                                c.listaProductos.add(a.vaca);
+                                System.out.println("Ingrese la cantidad que desea: ");
+                                cantidad = input.nextInt();
+                                c.cantidadvac=cantidad;}
 
+                            else if (producto.equals(a.pollo.nombre)){
+                                c.listaProductos.add(a.pollo);
+                                System.out.println("Ingrese la cantidad que desea: ");
+                                cantidad = input.nextInt();
+                                c.cantidadpol=cantidad;}
+                            else
+                                System.out.println("No existe...");
+                            break;}
+                        //Modificacion Bebestible
+                        case 2: {
+                            a.listBebestible();
+                            System.out.println("Ingrese el nombre del producto deseado: ");
+                            String producto = input.next();
+                            if (producto.equals(a.Refresco.nombre)) {
+                                c.listaProductos.add(a.Refresco);
+                                System.out.println("Ingrese la cantidad que desea: ");
+                                cantidad = input.nextInt();
+                                c.cantidadref=cantidad;}
 
+                            else if (producto.equals(a.agua.nombre)) {
+                                c.listaProductos.add(a.agua);
+                                System.out.println("Ingrese la cantidad que desea: ");
+                                cantidad = input.nextInt();
+                                c.cantidadagua=cantidad;}
+
+                            else if (producto.equals(a.jugo.nombre)) {
+                                c.listaProductos.add(a.jugo);
+                                System.out.println("Ingrese la cantidad que desea: ");
+                                cantidad = input.nextInt();
+                                c.cantidadjugo=cantidad;}
+
+                            else
+                                System.out.println("El producto deseado no existe...");
+                            break;
+                        }
+                        //Moficacion Vegetales
+                        case 3: {
+                            a.listVegetales();
+                            System.out.println("Ingrese el nombre del producto que desea Modificar: ");
+                            String producto = input.next();
+                            if (producto.equals(a.brocoli.nombre)) {
+                                c.listaProductos.add(a.brocoli);
+                                System.out.println("Ingrese la cantidad que desea Modificar: ");
+                                cantidad = input.nextInt();
+                                c.cantidadbroc=cantidad;}
+
+                            else if (producto.equals(a.Lechuga.nombre)) {
+                                c.listaProductos.add(a.Lechuga);
+                                System.out.println("Ingrese la cantidad que desea Modificar: ");
+                                cantidad = input.nextInt();
+                                c.cantidadlechu=cantidad;}
+
+                            else if (producto.equals(a.Papa.nombre)) {
+                                c.listaProductos.add(a.Papa);
+                                System.out.println("Ingrese la cantidad que desea Modificar: ");
+                                cantidad = input.nextInt();
+                                c.cantidadpapa=cantidad;}
+                            else
+                                System.out.println("El producto deseado no existe...");
+                            break;
+                        }
 
                 }
-
+                         }
+                //Boleta del Minimarket
                 case 4 -> {
                 int netover=c.calcularnetover();
                 int netocar=c.calcularnetocar();
@@ -174,13 +261,7 @@ public class Minimarket {
                 float totaliva=c.calculatotaliva(netover, totalbeb, totalcar);
                 c.boleta(netover,totalbeb,totalcar,netobeb,netocar,netototal,totaliva);
                 
-                String opcio = input.next();
-                
-                
-                
-                
-                
-                
+                String opcio = input.next(); 
                 
                 }
             }
