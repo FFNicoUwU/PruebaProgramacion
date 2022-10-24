@@ -26,7 +26,8 @@ public class Minimarket {
             System.out.println("1.- Productos Disponibles ");
             System.out.println("2.- Agregar Productos al Carrito");
             System.out.println("3.- Eliminar Productos");
-            System.out.println("4.- Salir");
+            System.out.println("4.- Boleta");
+            System.out.println("5.- Salir");
             System.out.println("Escoja una opción: ");
             opcion = input.nextInt();
             switch (opcion) {
@@ -103,19 +104,19 @@ public class Minimarket {
                                 c.listaProductos.add(a.Refresco);
                                 System.out.println("Ingrese la cantidad que desea: ");
                                 cantidad = input.nextInt();
-                                c.cantidadvac=cantidad;}
+                                c.cantidadref=cantidad;}
 
                             else if (producto.equals(a.agua.nombre)) {
                                 c.listaProductos.add(a.agua);
                                 System.out.println("Ingrese la cantidad que desea: ");
                                 cantidad = input.nextInt();
-                                c.cantidadvac=cantidad;}
+                                c.cantidadagua=cantidad;}
 
                             else if (producto.equals(a.jugo.nombre)) {
                                 c.listaProductos.add(a.jugo);
                                 System.out.println("Ingrese la cantidad que desea: ");
                                 cantidad = input.nextInt();
-                                c.cantidadvac=cantidad;}
+                                c.cantidadjugo=cantidad;}
 
                             else
                                 System.out.println("El producto deseado no existe...");
@@ -130,19 +131,19 @@ public class Minimarket {
                                 c.listaProductos.add(a.brocoli);
                                 System.out.println("Ingrese la cantidad que desea: ");
                                 cantidad = input.nextInt();
-                                c.cantidadvac=cantidad;}
+                                c.cantidadbroc=cantidad;}
 
                             else if (producto.equals(a.Lechuga.nombre)) {
                                 c.listaProductos.add(a.Lechuga);
                                 System.out.println("Ingrese la cantidad que desea: ");
                                 cantidad = input.nextInt();
-                                c.cantidadvac=cantidad;}
+                                c.cantidadlechu=cantidad;}
 
                             else if (producto.equals(a.Papa.nombre)) {
                                 c.listaProductos.add(a.Papa);
                                 System.out.println("Ingrese la cantidad que desea: ");
                                 cantidad = input.nextInt();
-                                c.cantidadvac=cantidad;}
+                                c.cantidadpapa=cantidad;}
                             else
                                 System.out.println("El producto deseado no existe...");
                             break;
@@ -163,8 +164,26 @@ public class Minimarket {
 
                 }
 
-
+                case 4 -> {
+                int netover=c.calcularnetover();
+                int netocar=c.calcularnetocar();
+                int netobeb=c.calcularnetobeb();
+                float totalcar=c.calculardscotcar();
+                float totalbeb=c.calculardscotbeb();
+                float netototal=c.calcularneto(netover, totalbeb, totalcar);
+                float totaliva=c.calculatotaliva(netover, totalbeb, totalcar);
+                c.boleta(netover,totalbeb,totalcar,netobeb,netocar,netototal,totaliva);
+                
+                String opcio = input.next();
+                
+                
+                
+                
+                
+                
+                
+                }
             }
-        }while (opcion != 3) ;
+        }while (opcion != 5) ;
         }
     }

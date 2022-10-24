@@ -87,5 +87,47 @@ public class Carrito implements calculo {
         return netover;
 
     }
+    
+    public float calcularneto(int netover,float totalbeb,float totalcar){
+        float neto= netover + totalbeb + totalcar;
+    
+    return neto;
+    }
+    
+    public float calculatotaliva(int netover,float totalbeb,float totalcar){
+    float neto= netover + totalbeb + totalcar;
+    float total=neto+neto*iva;
+    return total;}
+    
+     public void boleta(int netover,float totalbeb,float totalcar,int netobeb,int netocar,float neto,float total){
+         
+         System.out.println("-------Boleta------");
+         System.out.println("Producto: "+a.Lechuga.nombre+"  Cantidad: "+cantidadlechu+"   Preciounit: $"+a.Lechuga.precio);
+         System.out.println("Producto: "+a.Papa.nombre+"  Cantidad: "+cantidadpapa+"   Preciounit: $"+a.Papa.precio);
+         System.out.println("Producto: "+a.brocoli.nombre+"  Cantidad: "+cantidadbroc+"   Preciounit: $"+a.brocoli.precio);
+         System.out.println("");
+         System.out.println("Producto: "+a.cerdo.nombre+"  Cantidad: "+cantiadadcer+"   Preciounit: $"+a.cerdo.precio);
+         System.out.println("Producto: "+a.vaca.nombre+"  Cantidad: "+cantidadvac+"   Preciounit: $"+a.vaca.precio);
+         System.out.println("Producto: "+a.pollo.nombre+"  Cantidad: "+cantidadpol+"   Preciounit: $"+a.pollo.precio);
+         System.out.println("");
+         System.out.println("Producto: "+a.Refresco.nombre+"  Cantidad: "+cantidadref+"   Preciounit: $"+a.Refresco.precio);
+         System.out.println("Producto: "+a.agua.nombre+"  Cantidad: "+cantidadagua+"   Preciounit: $"+a.agua.precio);
+         System.out.println("Producto: "+a.jugo.nombre+"  Cantidad: "+cantidadjugo+"   Preciounit: $"+a.jugo.precio);
+         System.out.println("");
+         System.out.println("Total Carnes: $"+netocar );
+         System.out.println("Total Bebidas: $"+netobeb);
+         System.out.println("Total Verduras: $"+netover);
+         System.out.println("");
+         System.out.println("Total Carnes con descuento: $"+totalcar);
+         System.out.println("Total Bebidas con descuento: $"+totalbeb);
+         System.out.println("");
+         System.out.println("");
+         System.out.println("Subtotal: $"+neto);
+         System.out.println("Total: $"+total);
+         
+         
+         System.out.println("Gracias por comprar!!!");
+     
+     }
 }
 
